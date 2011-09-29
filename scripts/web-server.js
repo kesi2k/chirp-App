@@ -6,7 +6,7 @@ var sys = require('sys'),
     url = require('url'),
     events = require('events');
 
-var DEFAULT_PORT = 8000;
+var DEFAULT_PORT = process.env.C9_PORT;
 
 function main(argv) {
   new HttpServer({
@@ -41,7 +41,7 @@ function HttpServer(handlers) {
 HttpServer.prototype.start = function(port) {
   this.port = port;
   this.server.listen(port);
-  sys.puts('Http Server running at http://localhost:' + port + '/');
+  sys.puts('Http Server running at http://angular-seed.meroje.cloud9ide.com');
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {

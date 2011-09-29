@@ -1,22 +1,63 @@
-<!doctype html>
-<html xmlns:ng="http://angularjs.org/">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en" xmlns:ng="http://angularjs.org/"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en" xmlns:ng="http://angularjs.org/"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en" xmlns:ng="http://angularjs.org/"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" xmlns:ng="http://angularjs.org/"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <title>my angular app</title>
-  <link rel="stylesheet" href="css/app.css"/>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Your Page Title Here :)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<body ng:init="$window.$root = this">
 
-  <ng:view></ng:view>
 
-  <script src="lib/angular/angular.js" ng:autobind></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/widgets.js"></script>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+
+		<ng:view/>
+
+	</div><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="lib/angular/angular.js" ng:autobind></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/widgets.js"></script>
+
+<!-- End Document
+================================================== -->
 </body>
 </html>
