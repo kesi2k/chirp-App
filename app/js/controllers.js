@@ -10,10 +10,10 @@ function BuzzController(BuzzService, $route) {
 BuzzController.prototype = {
 	userChange : function() {
 		this.userId = this.$route.current.params.userId;
-		this.activities = this.Activity.get({
-			userId : this.userId
-		});
-		console.log(this.activities);
+        if (this.userId !== '')
+            this.activities = this.Activity.get({
+                userId : this.userId
+            });
 	},
 
 	expandReplies : function(activity) {
