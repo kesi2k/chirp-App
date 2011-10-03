@@ -7,8 +7,7 @@
 			filter: <input type="text" name="filterText" />
 		</span>
 		<span class="one-third column">
-			user: <input type="text" name="userId" ng:required class="two columns" />
-			<button ng:click="$location.updateHash('/buzz/' + userId)">fetch</button>
+			user: <input type="text" name="userId" ng:required />
 		</span>
 	</div>
 	<ul class="square sixteen columns">
@@ -49,4 +48,12 @@
 			</my:expand>
 		</li>
 	</ul>
+    <script>
+        $('input[name=userId]').keypress(function(e) {
+            var controller = angular.element('section').scope();
+            var userId = $(this).attr('value');
+            if(e.keyCode == 13)
+                controller.$location.updateHash('/buzz/' + userId);
+        });
+    </script>
 </section>
